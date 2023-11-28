@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/src/img/favicon.webp" type="image/x-icon" />
+    <link rel="stylesheet" href="/src/sass/main.scss" />
+    <script type="module" src="/src/js/controler.js"></script>
+    <script src="https://apis.google.com/js/api.js"></script>
+    <!-- //remember to insert your api key in config.js -->
+    <title>meanVerbs app</title>
+  </head>
+  <body>
+    <aside class="bookmark__container">
+      <button class="bookmark__btn">
+        <img
+          class="bookmark__btn__icon"
+          src="src/img/icon-folder.png"
+          alt="icon-folder"
+        />
+      </button>
+      <div class="list__bookmark hidden">
+        <ul class="bookmark__ul">
+          <!--  <li>
+            <p class="bookmark__announcement">Please add your first word</p>
+          </li> -->
+        </ul>
+      </div>
+      <button class="btn__download hidden">
+        <img
+          class="btn__download-icon"
+          src="src/img/pdf.svg"
+          alt="pdf-button"
+        />
+      </button>
+    </aside>
+    <header>
+      <div class="nav__header">
+        <nav class="nav__header__title__header">
+          <h1>Write your word here!</h1>
+        </nav>
+        <nav class="container__search">
+          <form class="search">
+            <input
+              type="text"
+              pattern="[a-zA-Z]+"
+              class="search__field"
+              placeholder="Search more than 1,000,000 words"
+            />
+            <button class="btn search__btn">
+              <svg class="search__icon">
+                <use href="src/img/icons.svg#icon-search"></use>
+              </svg>
+            </button>
+          </form>
+          <div class="search__error__container">
+            <!-- 
+            <div class="error">
+             <svg>
+                <use href="#icon-alert-triangle"></use>
+               </svg>
+             <p>message</p>
+              </div> -->
+          </div>
+        </nav>
+        <nav class="nav__header__logo">
+          <img
+            class="nav__header__logo--icon"
+            src="src/img/logo-2-preview.webp"
+            alt="logo mean verbs"
+          />
+          <h3>MeanVerbs App</h3>
+        </nav>
+      </div>
+    </header>
+
+    <div class="principal__Container">
+      <section class="section__one" id="scroll">
+        <div>
+          <!-- <ul class="section__one__ul_words">
+          <li class="section__one__li__words">
+            <a href="#time"><span>time</span></a>
+          </li>
+        </ul>
+        <ul class="ul_words">
+          <li class="li__words">
+            <a href="#time"><span>time</span></a>
+          </li>
+        </ul> -->
+        </div>
+      </section>
+      <section class="section__btn">
+        <di>
+          <!--    <button class="btn__columns btn__prev">
+            <svg class="btn__columns__icon">
+              <use href="src/img/icons.svg#icon-arrow-left"></use>
+            </svg>
+          </button>
+          <button class="btn__columns btn__next">
+            <svg class="btn__columns__icon">
+              <use href="src/img/icons.svg#icon-arrow-right"></use>
+            </svg>
+          </button> -->
+        </di>
+      </section>
+      <section class="section__two">
+        <div>
+          <!-- <div class="img__flex">
+          <figure class="word__fig">
+            <img
+              height="200px"
+              src="src/img/logo-1-preview.webp"
+              alt="img-test"
+            />
+          </figure>
+        </div>
+        <div class="word__container">
+          <div class="word__phrase">
+            <svg class="word__info-icon">
+              <use href="src/img/icons.svg#icon-smile"></use>
+            </svg>
+            <span class="word__title"> word:"hello"</span>
+          </div>
+          <div class="word__phonetics">
+            <audio controls>
+              audio
+              <source src="name.mp3" type="audio/mp3" />
+            </audio>
+            <audio controls>
+              pronuntiaion
+              <source src="name.mp3" type="audio/mp3" />
+            </audio>
+            <svg class="word__info-icon">
+              <use href="src/img/icons.svg#icon-check"></use>
+            </svg>
+            <span class="word__audio">2:text:</span>
+          </div>
+          <div class="word__meaning">
+            <svg class="word__info-icon">
+              <use href="src/img/icons.svg#icon-user"></use>
+            </svg>
+            <span class="word__synonyms">greeting</span>
+            <span class="word__partOfSpech">noun'</span>
+
+            <span class="word__antonyms">bye goodbye'</span>
+
+            <span class="word__definitions">A greetings (salutation)'</span>
+          </div>
+          <div class="word__source">
+            <svg class="word__info-icon">
+              <use href="src/img/icons.svg#icon-upload-cloud"></use>
+            </svg>
+            <span class="word__sourceUrls">link</span>
+          </div>
+        </div>-->
+        </div>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <div class="footer__panel__up">
+        <h3>Lasted projects Posts</h3>
+        <div class="footer__panel__up__links">
+          <p>
+            <a
+              class="word__sourceUrls"
+              href="https://mapingyou.netlify.app/"
+              target="blank"
+              >Maping you App</a
+            >
+          </p>
+          <p>
+            <a
+              class="word__sourceUrls"
+              href="https://the-web-bank-app.netlify.app"
+              target="blank"
+            >
+              Web bank App</a
+            >
+          </p>
+          <p>
+            <a
+              class="word__sourceUrls"
+              href="https://the-pigs-game.netlify.app"
+              target="blank"
+              >the Pig Gane</a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="footer__panel__bottom">
+        <p>Copyright © 2023 Renny Garces</p>
+        <nav class="icons-footer">
+          <button class="btn__footer">
+            <a
+              rel="noopener"
+              href="https://www.linkedin.com/in/renny-garces-marriaga"
+              target="_blank"
+              ><img
+                alt="images contact icons"
+                class="btn__footer__icon"
+                src="src/img/footer-icon/icons8-linkedin-48.png"
+            /></a>
+          </button>
+          <button class="btn__footer">
+            <a href="https://github.com/RennyGarces" target="_blank"
+              ><img
+                alt="images contact icons"
+                class="btn__footer__icon"
+                src="src/img/footer-icon/iconmonstr-github-1.svg"
+            /></a>
+          </button>
+        </nav>
+        <p class="">
+          Designed by
+          <a
+            class="word__sourceUrls"
+            rel="noopener"
+            href="https://portafolio-renny-garces.netlify.app/"
+            target="_blank"
+            >Renny garces</a
+          >
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

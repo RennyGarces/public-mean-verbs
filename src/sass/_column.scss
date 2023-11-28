@@ -1,0 +1,120 @@
+.section__one {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  overflow: scroll;
+  max-width: 67%;
+  margin-top: 1rem;
+  box-shadow: 0 0 2px $color-border;
+
+  &__li__words:hover {
+    background-color: $color-bar;
+    a {
+      color: $color-border;
+      transform: translateY(-3px);
+    }
+  }
+  &__li__words {
+    transition: all 1s ease-out;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    border: 1px solid $color-border;
+    border-radius: 4px;
+    padding: 1.5rem;
+    a {
+      z-index: 1;
+      text-decoration: none;
+      color: $color-font;
+      font-size: 1.6rem;
+      font-weight: 800;
+      padding: 1.6rem 3em;
+      margin: -1em;
+    }
+  }
+  @media only screen and (max-width: $size-large) {
+    max-width: 65%;
+  }
+  @media only screen and (max-width: $size-medium) {
+    max-width: 90%;
+    ::-webkit-scrollbar-thumb:hover {
+      background: $color-button;
+    }
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 0;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px $color-container;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 5px $color-border;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #5c5c5c33;
+}
+@media only screen and (max-width: $size-medium) {
+  ::-webkit-scrollbar-thumb {
+    background: $color-button;
+    border-radius: 10px;
+  }
+}
+.section__btn {
+  position: relative;
+
+  @media only screen and (max-width: $size-large) {
+    display: none;
+  }
+}
+.btn__columns {
+  position: absolute;
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 10rem;
+  border: none;
+  border-radius: 8px;
+  border: 2px solid $color-border;
+  background-color: #8b8b8b00;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: $color-font;
+  text-transform: capitalize;
+  svg {
+    fill: $color-button;
+    width: 2.4rem;
+    height: 4rem;
+  }
+
+  &:hover {
+    transition: all 1s ease-out;
+    background-color: $color-bar;
+    svg {
+      fill: $color-border;
+    }
+  }
+}
+.btn__direction {
+  &__left {
+    top: -1rem;
+    right: 48rem;
+    background-color: rgba(209, 209, 209, 0.226);
+  }
+  &__right {
+    top: -1rem;
+    left: 48rem;
+    background-color: rgba(209, 209, 209, 0.226);
+  }
+}

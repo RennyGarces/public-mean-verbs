@@ -1,0 +1,210 @@
+.nav__header {
+  z-index: 100;
+  top: 0;
+  margin: 1rem 1rem;
+  padding: 0.4rem 3rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  font-size: large;
+
+  min-height: 15rem;
+  border-bottom-right-radius: 7px;
+  /*   @include box-styles($color-container); */
+
+  &__logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $color-font;
+  }
+
+  &__logo--icon {
+    background-color: #fcf3751a;
+    border-radius: 10px;
+    width: 8rem;
+    height: 6rem;
+  }
+  @media only screen and (max-width: $size-large) {
+    &__title__header {
+      font-size: 1.4rem;
+    }
+  }
+
+  @media only screen and (max-width: $size-medium) {
+    flex-direction: column;
+    padding: 0.5rem 0.5rem;
+    gap: 1rem;
+    &__title__header {
+      font-size: 1.3rem;
+    }
+    &__logo--icon {
+      width: 4.5rem;
+      height: 3rem;
+    }
+    &__logo {
+      font-size: 1rem;
+    }
+  }
+  @media only screen and (max-width: $size-small) {
+    width: 92%;
+    gap: 1rem;
+  }
+}
+
+.search {
+  transition: all 1.2 ease-in-out;
+  position: relative;
+  right: 20%;
+  z-index: 100;
+  background-color: #0f0909;
+  border-radius: 5rem;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+  transition: all 0.3s;
+  border: 0.1px solid $color-border;
+  &::before {
+    content: "";
+    z-index: -100;
+    position: absolute;
+    left: -1.4rem;
+    padding: 16px 59px;
+    border-radius: 50%;
+    background-color: inherit;
+  }
+  &__error__container {
+    padding: 1rem 0;
+  }
+  &__error__header {
+    position: absolute;
+    display: flex;
+    transform: translate(-20%, 0);
+    font-size: 1.5rem;
+    font-weight: 700;
+    align-items: center;
+    gap: 1rem;
+    color: $color-button;
+
+    svg {
+      fill: #4b4e04;
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+  &:focus-within {
+    transform: translateY(-3px);
+    box-shadow: 0 0 1rem $color-border;
+  }
+
+  &__field {
+    padding-left: 1rem;
+    border: none;
+    background: none;
+    font-family: inherit;
+    color: #cccccc;
+    font-weight: 700;
+    font-size: 1.7rem;
+    width: 38rem;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: $color-container;
+    }
+  }
+
+  &__btn {
+    background-color: $color-button;
+    border: none;
+    width: 7rem;
+    height: 4rem;
+    font-weight: 700;
+    font-family: inherit;
+    border-top-right-radius: 34px;
+    border-bottom-right-radius: 34px;
+  }
+  &__icon {
+    fill: $color-font;
+    width: 2rem;
+    height: 2rem;
+    background-color: $color-button;
+  }
+  @media only screen and (max-width: $size-large) {
+    position: none;
+    right: 25%;
+    &__field {
+      width: 29rem;
+      font-size: 1.4rem;
+    }
+    &__error__header {
+      transform: translate(-30%, 0);
+    }
+  }
+
+  @media only screen and (max-width: $size-medium) {
+    right: 5%;
+    &__error__header {
+      transform: translate(-10%, 0);
+    }
+  }
+  @media only screen and (max-width: $size-small) {
+    right: 0;
+    &__field {
+      width: 22rem;
+      height: 4rem;
+      font-size: 1.1rem;
+      padding-left: 0;
+    }
+
+    &__icon {
+      height: 4rem;
+    }
+    &__error__header {
+      top: 10rem;
+      font-size: 1rem;
+      transform: translate(-1%, 0);
+    }
+  }
+}
+
+.search__floating {
+  position: fixed;
+  z-index: 1000;
+  bottom: 1.4rem;
+  right: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.nav__header__title__header h1 {
+  overflow: hidden;
+  border-right: 0.2em solid $color-button;
+  white-space: nowrap;
+  letter-spacing: -1px;
+  animation: typing_Header 4s steps(30, end),
+    blink-caret_Header 0.5s step-end infinite;
+
+  @keyframes typing_Header {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  @keyframes blink-caret_Header {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: $color-button;
+    }
+  }
+}

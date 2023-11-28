@@ -1,0 +1,133 @@
+.principal__Container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  font-size: 2rem;
+  min-height: 50rem;
+  @include box-styles($color-container);
+  margin: 4rem;
+  @media only screen and (max-width: $size-large) {
+    margin: 2rem;
+  }
+}
+
+/* icon foldder */
+.bookmark {
+  &__announcement {
+    font-weight: 700;
+    font-size: 1.4rem;
+
+    @include typing-efect($seconds: 2.2s);
+  }
+  &__container {
+    z-index: 1000;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-items: start;
+    z-index: 1000;
+    top: 70%;
+    left: 1%;
+
+    max-height: 60rem;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+  }
+  &__btn {
+    border: none;
+    cursor: move;
+    background-color: #ca737300;
+    &__icon {
+      width: inherit;
+      height: inherit;
+      opacity: 0.6;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__ul {
+    border-radius: 3px;
+    font-size: 1.4rem;
+    color: $color-container;
+    background-color: #d3c6c6d0;
+    padding: 1.3rem;
+    margin: 0.1rem;
+    max-width: 12rem;
+    list-style: none;
+  }
+  &__list__li {
+    list-style: none;
+    padding: 1rem;
+  }
+  &__list__name {
+    font-size: 1.2rem;
+    background-color: #72727288;
+    border-radius: 3px;
+    text-decoration: none;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    color: $color-font;
+    &:hover {
+      transition: 0.3s all;
+      background-color: $color-background;
+      color: $color-button;
+    }
+  }
+}
+.transparent {
+  opacity: 40%;
+}
+.hidden {
+  display: none;
+}
+.list__bookmark {
+  background-color: #2b0e0e63;
+  border-radius: 3px;
+  border-top: 4px solid #fdfdfd33;
+  border-left: 4px solid #fdfdfd33;
+  border-bottom: 4px solid #fdfdfd33;
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+  overflow-y: scroll;
+}
+
+.btn__download {
+  cursor: pointer;
+  background-color: rgba(240, 248, 255, 0);
+  align-self: start;
+  border: none;
+  width: 6rem;
+  height: 5rem;
+  &-icon {
+    width: inherit;
+    height: inherit;
+    &:active {
+      transform: translatex(10%);
+    }
+  }
+}
+/* bookmark */
+.btn__save {
+  cursor: pointer;
+  border: none;
+  background-color: $color-button;
+  border-radius: 50%;
+  justify-self: center;
+  width: 7rem;
+  height: 7rem;
+  &__icon {
+    width: 7rem;
+    height: 7rem;
+  }
+}
+.btn__save__saved {
+  border-radius: 50%;
+  border: none;
+  background-color: #0000008e;
+}

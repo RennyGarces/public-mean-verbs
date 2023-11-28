@@ -1,0 +1,71 @@
+.footer {
+  margin: 2rem 1rem;
+  max-width: 98%;
+  @include box-styles($color-container);
+  @media only screen and (max-width: $size-large) {
+    max-width: 98%;
+  }
+  &__panel__up {
+    margin: 4rem;
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 5rem;
+    align-items: center;
+    h3 {
+      font-size: 1.9rem;
+      color: $color-font;
+    }
+    &__links {
+      font-size: 1.7rem;
+      display: grid;
+      gap: 9rem;
+      grid-template-columns: 1fr 1fr 1fr;
+
+      @media only screen and (max-width: $size-small) {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+.footer__panel__bottom {
+  height: 15rem;
+  border-top: 5rem solid $color-border;
+  background-color: $color-background;
+  align-items: center;
+
+  display: grid;
+  grid-template-columns: 1fr 0.3fr 1fr;
+
+  p,
+  .icons-footer {
+    color: $color-container;
+    font-size: 1.3rem;
+    justify-self: center;
+  }
+  .btn__footer {
+    border: 2px solid $color-border;
+    background-color: #f8f8f860;
+    border-radius: 20%;
+    &__icon {
+      height: 3rem;
+      width: 3rem;
+
+      &:hover {
+        background-color: $color-container;
+      }
+    }
+  }
+  @media only screen and (max-width: $size-small) {
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
+    gap: 2rem;
+    padding-bottom: 3rem;
+  }
+}

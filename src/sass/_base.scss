@@ -1,0 +1,86 @@
+//colors
+$color-background: #dbcdcd;
+
+$color-container: linear-gradient(
+  to left top,
+  rgb(161, 131, 196),
+  rgb(226, 219, 213)
+);
+$color-border: #4e3fd163;
+$color-button: #964949;
+$color-bar: #5c5c5c;
+$color-font: #3d3d3d;
+$color-transparent: #ffffff00;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+body {
+  background: $color-background;
+  font-family: "Roboto Mono";
+}
+
+/////////////////////////////////////////
+$size-large: 78.15em; // 1250px
+$size-medium: 66.25em; // 980px
+$size-small: 37.5em; // 600px
+$size-smallest: 31.25em; // 500px
+/////////////////////////////////////////
+@mixin box-styles($color) {
+  border: 3px solid #a72c2c5b;
+  box-shadow: 10px 10px 6px -7px $color-border;
+  background: $color;
+  border-radius: 10px;
+  overflow: hidden;
+}
+@mixin reject-box-styles() {
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+@mixin typing-efect($seconds: 0s) {
+  @if $seconds > 0s {
+    overflow: hidden;
+    border-right: 0.2em solid $color-transparent;
+    white-space: nowrap;
+    letter-spacing: -1px;
+    animation: typing $seconds steps(30, end),
+      blink-caret $seconds step-end infinite;
+
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+
+    @keyframes blink-caret {
+      from,
+      to {
+        border-color: transparent;
+      }
+      50% {
+        border-color: $color-transparent;
+      }
+    }
+  } @else {
+    white-space: initial;
+  }
+}
+
+@mixin links-background() {
+  color: #110f0f;
+  text-decoration: none;
+  font-size: 1.4rem;
+  padding: 0.4rem 1.4rem;
+  border-radius: 10px;
+  font-weight: 700;
+}

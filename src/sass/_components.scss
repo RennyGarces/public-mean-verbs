@@ -1,0 +1,44 @@
+.spinner {
+  margin: 5rem auto;
+  text-align: center;
+
+  svg {
+    height: 9rem;
+    width: 9rem;
+    animation: rotate 2s infinite linear;
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.message,
+.error {
+  max-width: 60%;
+  margin: 2rem;
+  padding: 2rem;
+  @include box-styles(#ffffff33);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  svg {
+    fill: $color-button;
+    height: 6rem;
+    width: 6rem;
+    transform: translateY(-0.4rem);
+  }
+
+  p {
+    margin-left: 1.5rem;
+    font-size: 2rem;
+    line-height: 1.8;
+    font-weight: 600;
+  }
+}

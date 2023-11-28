@@ -1,0 +1,22 @@
+{
+  "name": "meanverbs",
+  "version": "1.0.0",
+  "description": "check verbs in an easy way",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "author": "Renny Garces",
+  "license": "ISC",
+  "dependencies": {
+    "core-js": "^3.33.0",
+    "jspdf": "^2.5.1",
+    "parcel": "^2.10.3",
+    "regenerator-runtime": "^0.14.0",
+    "sass": "^1.69.5"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.10.3",
+    "process": "^0.11.10"
+  }
+}
