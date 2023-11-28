@@ -593,7 +593,8 @@ var _bookmarkViewsJsDefault = parcelHelpers.interopDefault(_bookmarkViewsJs);
 if (module.hot) {
   module.hot.accept();
 }
- */ const showWord = async function() {
+ */ //remember to insert your api key in config.js
+const showWord = async function() {
     try {
         (0, _wordsViewsJsDefault.default).spiner();
         let id = window.location.hash.slice(1);
@@ -23723,7 +23724,7 @@ parcelHelpers.export(exports, "ARRAY_WORDS", ()=>ARRAY_WORDS);
 const API_URL = `https://api.dictionaryapi.dev/api/v2/entries/en`;
 const TIMEOUT_SEC = 15;
 const YOUTUBE_URL = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=`;
-const YOUTUBE_KEY = `%10pronunciation&key=AIzaSyDuICRZbPCqBYdyc5Z3CmU0blimAxOkevM`;
+const YOUTUBE_KEY = "please enter your youtube key";
 const RESULT_PER_LIST = 10;
 const ARRAY_WORDS = [
     "cumbersome",
