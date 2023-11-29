@@ -1,5 +1,5 @@
 # meanVerbs
-This dictionary shows us audios videos and more feactures :)
+This dictionary shows us audios videos and more features :)
 
 
 Through a YouTube API key connected to the dictionary we can see videos of the pronunciation of the word at the same time, download audios and print a PDF of the words that we have saved while using the application
